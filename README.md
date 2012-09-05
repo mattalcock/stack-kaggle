@@ -14,3 +14,42 @@ To run the benchmarks, you also need to [download the data](https://www.kaggle.c
 Basic Benchmark
 Prior Benchmark
 Uniform Benchmark
+
+
+Basic_Classify = 0.21689
+==================================
+train_file = "train-sample.csv"
+full_train_file = "train.csv"
+test_file = "public_leaderboard.csv"
+submission_file = "basic_classify.csv"
+
+feature_names = [ "BodyLength"
+                , "NumTags"
+                , "OwnerUndeletedAnswerCountAtPostTime"
+                , "ReputationAtPostCreation"
+                , "TitleLength"
+                , "TitleWordCount"
+                , "UserAge"
+                ]
+n_estimators=60
+
+Basic_Classify = 
+==================================
+train_file = "train-A.csv"
+full_train_file = "train.csv"
+test_file = "public_leaderboard.csv"
+submission_file = "basic_classify_v2.csv"
+
+feature_names = [ "BodyLength"
+                , "NumTags"
+                , "OwnerUndeletedAnswerCountAtPostTime"
+                , "ReputationAtPostCreation"
+                , "TitleLength"
+                , "TitleWordCount"
+                , "UserAge"
+                ]
+n_estimators=60
+
+
+ssh -i ~/.ec2/ec2.pem ubuntu@ec2-23-23-24-119.compute-1.amazonaws.com
+scp test/winning.txt root@my-ec2-public-ip.amazonaws.com:temp-files/
